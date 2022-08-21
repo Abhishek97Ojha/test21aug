@@ -1,0 +1,42 @@
+JavaScript provides six methods to select an element from the document :- 
+• getElementById – search element by element_id
+  The getElementById method returns an element whose id matches a passed string.
+  eg.:- document.getElementById('parent-1');
+
+• getElementsByTagName – search element by tag name (e.g., span, div)
+  The getElementsByTagName method returns the HTMLCollection of elements that match the passed tag name.
+  If you pass * (universal selector), then it selects all the elements.
+  eg.:- document.getElementsByTagName(span);
+  
+• getElementsByClassName – search element by class name
+  The getElementsByClassName method returns an HTMLCollection of elements that match the passed class name.
+  eg.:- document.getElementsByClassName("child");
+  
+• getElementsByName – search element by name attribute
+  The getElementsByName method returns the elements that match the value of the name attribute with the passed string. 
+  The return value is a live NodeList Collection.
+  eg.:- document.getElementByName("first-boy");
+  
+• querySelector – returns the first element that matches the specified selector
+  The querySelector method returns the first element that matches the passed selector.
+  querySelector can be called on document and element. If no elements match the selector, null is returned.
+  SyntaxError is thrown when the CSS selector is invalid.
+  eg.:-// using id selector 
+       document.querySelector("#parent");
+       
+       // using class selector 
+       document.querySelector(".child"); //Returns first element in the document with class name 
+
+       // using tagname  
+       document.querySelector("div"); //Returns first div 
+
+      // using tagname  
+      document.querySelector("div span.child"); //Returns first span element with class name child, inside a div 
+
+• querySelectorAll – returns elements that match the specified selector
+  The querySelectorAll method is an extension of the querySelector method. This method returns all the elements that match the passed selector.
+  querySelectorAll returns static (non-live) NodeList Collection.
+  This method can be called on both document and element.
+  We can send multiple selectors separated by commas.
+  If no matches are found, an empty NodeList is returned.
+  eg.:- document.querySelectorAll(".child");//returns all element with child class
